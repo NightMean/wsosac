@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipdb = "*"
+pdbpp = "*"
+
+[packages]
+urlparse2 = "*"
+requests-html = "*"
+urllib3 = "*"
+passlib = "*"
+tmdbv3api = "*"
+
+[requires]
+python_version = "3.8"
