@@ -176,7 +176,8 @@ class Webshare:
         datalist_processed = list()
         for datafile in self.datalist:
             LOGGER.debug('Processing datafile: %s', datafile)
-            df_normalized = Webshare._remove_accents(datafile['name'].lower()).replace('.', ' ')
+            df_normalized = Webshare._remove_accents(datafile['name'].lower())
+            df_normalized = re.sub(r'[^A-Za-z0-9]+', ' ', df_normalized)
             LOGGER.debug('name wihouth/with diacritics: %s <--> %s', df_normalized, datafile['name'])
             rank = 0
             for word in sname:
